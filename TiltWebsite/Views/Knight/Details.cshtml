@@ -1,0 +1,138 @@
+﻿@model BLL.KnightBLL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KnightBLL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KnightID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KnightID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KnightName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KnightName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Strength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Strength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dexterity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dexterity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Constitution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Constitution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderBonus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderBonus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KnightID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

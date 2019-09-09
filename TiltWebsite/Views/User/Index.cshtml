@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BLL.UserBLL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create With Knight", "CreateWithKnight")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.UserID }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.UserID }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.UserID })
+        </td>
+    </tr>
+}
+
+</table>

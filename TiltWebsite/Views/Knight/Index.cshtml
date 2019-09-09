@@ -1,0 +1,117 @@
+﻿@model IEnumerable<BLL.KnightBLL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KnightID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KnightName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Strength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dexterity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Constitution)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderID)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.OrderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderBonus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoleID)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KnightID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KnightName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Strength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dexterity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Constitution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderID)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.OrderName)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.OrderBonus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleID)*@
+        @*</td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.KnightID }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.KnightID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.KnightID })
+        </td>
+    </tr>
+}
+
+</table>
