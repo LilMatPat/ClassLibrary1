@@ -4,18 +4,18 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>User Details</h2>
 
 <div>
-    <h4>UserBLL</h4>
+    <h4></h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.UserID)
-        </dt>
+        </dt>*@
 
         <dd>
-            @Html.DisplayFor(model => model.UserID)
+            @Html.HiddenFor(model => model.UserID)
         </dd>
 
         <dt>

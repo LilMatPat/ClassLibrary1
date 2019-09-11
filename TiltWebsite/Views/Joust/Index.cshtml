@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index Of Knights</h2>
+<h2>Index Of Challengers</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -31,16 +31,13 @@
         </th>
         @*<th>
             @Html.DisplayNameFor(model => model.UserID)
-        </th>*@
-        @*<th>
-            @Html.HiddenFor(model => model.OrderID)
-        </th>*@
-        @*<th>
-        @Html.DisplayNameFor(model => model.OrderName)
-        </th>*@
-        @*
-
-
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderName)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.OrderBonus)
         </th>
@@ -84,14 +81,14 @@
         </td>
         @*<td>
             @Html.DisplayFor(modelItem => item.UserID)
-        </td>*@
-        <td>
-            @Html.HiddenFor(modelItem => item.OrderID)
         </td>
-        @*<td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.OrderName)
-        </td>*@
-        @*<td>
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.OrderBonus)
         </td>
         <td>
@@ -107,12 +104,11 @@
             @Html.DisplayFor(modelItem => item.Hash)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RoleID)*@
-        @*</td>*@
+            @Html.DisplayFor(modelItem => item.RoleID)
+        </td>*@
         <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.KnightID }) |
-            @Html.ActionLink("Details", "Details", new {  id=item.KnightID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.KnightID })
+            @Html.ActionLink("Challenge", "Challenge", new {  id=item.KnightID }) |
+           
         </td>
     </tr>
 }

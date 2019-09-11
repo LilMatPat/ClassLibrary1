@@ -4,17 +4,17 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Create With Knight</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>TwoLevelsModel</h4>
+        <h4></h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
+        <div hidden class="form-group">
             @Html.LabelFor(model => model.UserID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.UserID, new { htmlAttributes = new { @class = "form-control" } })
@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div hidden class="form-group">
             @Html.LabelFor(model => model.KnightID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.KnightID, new { htmlAttributes = new { @class = "form-control" } })

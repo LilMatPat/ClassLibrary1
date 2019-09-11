@@ -315,6 +315,20 @@ namespace BLL
             }
             return ProposedReturnValue;
         }
+        public List<KnightBLL> GetKnightsRelatedToUser(int skip, int take,int UserID)
+        {
+            List<KnightBLL> ProposedReturnValue = new List<KnightBLL>();
+            List<KnightDAL> ListOfDataLayerObjects = _context.GetKnightsRelatedToUser(skip, take,UserID);
+            foreach (KnightDAL role in ListOfDataLayerObjects)
+            {
+                KnightBLL BusinessObject = new KnightBLL(role);
+                ProposedReturnValue.Add(BusinessObject);
+            }
+            return ProposedReturnValue;
+        }
         #endregion Knights
+        #region MeaningfulCalculation
+
+        #endregion MeaningfulCalculation
     }
 }

@@ -11,6 +11,8 @@ namespace TiltWebsite.Controllers
 {
     public class RoleController : Controller
     {
+        [MustBeInRole (Roles="7")]
+    
         public ActionResult Index()
         {
             
@@ -34,6 +36,7 @@ namespace TiltWebsite.Controllers
             return View(Model); // model is list of roles, name of view is same as method name
         }
         [MustBeLoggedIn]
+        
         // GET: Role/Details/5
         public ActionResult Details(int id)
         {

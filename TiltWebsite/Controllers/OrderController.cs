@@ -58,7 +58,7 @@ namespace TiltWebsite.Controllers
             }
             return View(Order);
         }
-        [MustBeLoggedIn]
+        [MustBeInRole(Roles = "7")]
         // GET: Order/Create
         public ActionResult Create()
         {
@@ -87,7 +87,8 @@ namespace TiltWebsite.Controllers
                 return View("Error");
             }
         }
-        [MustBeLoggedIn]
+       
+        [MustBeInRole(Roles = "7")]
         // GET: Order/Edit/5
         public ActionResult Edit(int id)
         {
@@ -130,7 +131,7 @@ namespace TiltWebsite.Controllers
                 return View("Error");
             }
         }
-        [MustBeLoggedIn]
+        [MustBeInRole(Roles = "7")]
         // GET: Order/Delete/5
         public ActionResult Delete(int id)
         {

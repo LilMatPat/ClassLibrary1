@@ -559,8 +559,37 @@ namespace DataAccessLayer
             }
             return proposedReturnValue;
         }
+        public List<KnightDAL> GetKnightsRelatedToUser(int skip, int take, int UserID)
+        {
+            List<KnightDAL> proposedReturnValue = new List<KnightDAL>();
+            try
+            {
+                EnsureConnected();
+                using (SqlCommand command = new SqlCommand("GetKnightsRelatedToUser", _connection))
+                {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                    command.Parameters.AddWithValue("@Skip", skip);
+                    command.Parameters.AddWithValue("@Take", take);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        KnightMapper m = new KnightMapper(reader);
+                        while (reader.Read())
+                        {
+                            KnightDAL r = m.KnightFromReader(reader);
+                            proposedReturnValue.Add(r);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) when (Log(ex))
+            {
 
-        
+            }
+            return proposedReturnValue;
+        }
+
+
         public int CreateKnight(string KnightName, int Strength, int Dexterity, int Constitution, int Precision, int UserID, int OrderID)
         {//proposed return false unless otherwise changed
             int ProposedReturnValue = 0;

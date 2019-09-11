@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterCreate.cs" />
     <Compile Include="MeaningfulCalculation.cs" />
     <Compile Include="ContextBLL.cs" />
     <Compile Include="UserBLL.cs" />

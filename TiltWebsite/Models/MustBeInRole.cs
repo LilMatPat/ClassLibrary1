@@ -25,7 +25,8 @@ namespace TiltWebsite.Models
  filterContext.Controller.TempData.Add("ReturnURL", ReturnURL);
  System.Web.Routing.RouteValueDictionary dict = new System.Web.Routing.RouteValueDictionary();
  dict.Add("Controller","Home");
- filterContext.Result = new RedirectToRouteResult(dict);
+                dict.Add("Action", "Login");
+                filterContext.Result = new RedirectToRouteResult(dict);
 
 }
        }

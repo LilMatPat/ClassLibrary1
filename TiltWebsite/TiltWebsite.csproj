@@ -123,6 +123,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JoustController.cs" />
     <Compile Include="Controllers\KnightController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\TwoLevelsModel.cs" />
     <Compile Include="Models\SymbolicConstants.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
@@ -198,6 +200,8 @@
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\User\CreateWithKnight.cshtml" />
+    <Content Include="Views\Joust\Index.cshtml" />
+    <Content Include="Views\Joust\Challenge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -220,6 +224,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{839A0861-A0E2-4A66-8494-DD36123A66D2}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{62DA2629-E57C-412C-9E10-C9E3061F5BA7}</Project>
+      <Name>Logger</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -46,6 +46,10 @@ namespace TiltWebsite.Controllers
         {
             using (ContextBLL ctx = new ContextBLL())
             {
+                if(!ModelState.IsValid)
+                {
+                    return View(info);
+                }
                 UserBLL user = ctx.FindUserByUsername(info.Username);
                 if (user == null)
                 {
@@ -60,7 +64,7 @@ namespace TiltWebsite.Controllers
                 if (validateduser)
                 {
                     Session["AUTHUsername"] = user.Username;
-                    Session["AUTHRoles"] = user.RoleName;
+                    Session["AUTHRoles"] = user.RoleID.ToString();
                     return Redirect(info.ReturnURL);
                 }
                 info.message = "The password was incorrect";

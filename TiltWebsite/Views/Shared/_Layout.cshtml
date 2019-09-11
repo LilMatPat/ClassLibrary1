@@ -22,14 +22,15 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                   
+
                     <li>@Html.ActionLink("Orders", "Index", "Order")</li>
                     <li>@Html.ActionLink("Roles", "Index", "Role")</li>
                     <li>@Html.ActionLink("Users", "Index", "User")</li>
                     <li>@Html.ActionLink("Knights", "Index", "Knight")</li>
+                    <li>@Html.ActionLink("Joust", "Index", "Joust")</li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                <li>Welcome @HttpContext.Current.User.Identity.Name </li>
+                        <li>Welcome @HttpContext.Current.User.Identity.Name </li>
                         <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
                         if (User.Identity.AuthenticationType.StartsWith("ClearText"))
                         {
@@ -41,9 +42,9 @@
                     {
                         <li>@Html.ActionLink("Register", "Register", "Home")</li>
 
-                        <li>@Html.ActionLink("Login","Login", "Home")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>
                     }
-                    
+
                 </ul>
             </div>
         </div>
